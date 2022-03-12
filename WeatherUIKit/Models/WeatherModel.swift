@@ -38,12 +38,6 @@ struct CurrentWeather {
     let conditionId: Int
     let temperature: Double
     let desc: String
-    let wind: Double
-    let humidity: Double
-    
-    var humidityString: String {
-        return String(format: "%.0f", humidity)
-    }
     
     var temperatureString: String {
         return String(format: "%.0f", temperature)

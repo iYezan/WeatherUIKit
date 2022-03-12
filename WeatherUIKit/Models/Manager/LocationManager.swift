@@ -16,10 +16,8 @@ extension NetworkManager {
             let id = decodedData.current.weather[0].id
             let desc = decodedData.current.weather[0].main
             let temp = decodedData.current.temp
-            let humidity = decodedData.current.humidity
-            let wind = decodedData.current.wind_speed
             
-            let currentWeather = CurrentWeather(conditionId: id, temperature: temp, desc: desc, wind: wind, humidity: humidity)
+            let currentWeather = CurrentWeather(conditionId: id, temperature: temp, desc: desc)
     
             let weather = WeatherModel(current: currentWeather)
             

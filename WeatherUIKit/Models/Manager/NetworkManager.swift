@@ -16,9 +16,7 @@ struct NetworkManager {
     var delegate: WeatherManagerDelegate?
     
     func fetchGeocode(cityName:String) {
-        let urlString = "\(geocodeApi)&q=\(cityName)"
-////        let safeURL = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-//        if let url = safeURL{
+        let urlString = "\(geocodeApi)&q=\(cityName)" 
             performRequest(urlString: urlString, isFetchWeather: false)
     }
     

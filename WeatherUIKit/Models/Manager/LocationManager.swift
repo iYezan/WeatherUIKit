@@ -30,7 +30,7 @@ extension NetworkManager {
         }
     }
     
-     func parsedGeocodeJson(geocodeData:Data) -> GeocodeModel? {
+     func parsedGeocodeJson(geocodeData:Data) -> GeocodeData? {
         let decoder = JSONDecoder()
         do{
             let decodedData = try decoder.decode([GeocodeData].self, from: geocodeData)
@@ -43,9 +43,8 @@ extension NetworkManager {
                 let lat = decodedData.first!.lat
                 let lon = decodedData.first!.lon
                 let country = decodedData.first!.country
-                let geocode = GeocodeModel(name:name, lat: lat, lon: lon, country: country)
-                
-
+                let geocode = GeocodeData(name:name, lat: lat, lon: lon, country: country)
+            
                 return geocode
             }
             

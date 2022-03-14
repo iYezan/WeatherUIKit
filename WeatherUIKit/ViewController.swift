@@ -98,7 +98,7 @@ extension ViewController: WeatherManagerDelegate {
         }
     }
     
-    func didUpdateGeocode(_ weatherManager: NetworkManager, geocode: GeocodeModel) {
+    func didUpdateGeocode(_ weatherManager: NetworkManager, geocode: GeocodeData) {
         DispatchQueue.main.async {
             self.cityLabel.text = geocode.name
             weatherManager.fetchWeather(lat: geocode.lat, lon: geocode.lon)

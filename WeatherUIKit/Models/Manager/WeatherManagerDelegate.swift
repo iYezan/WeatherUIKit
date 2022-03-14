@@ -9,7 +9,7 @@ import Foundation
 
 protocol WeatherManagerDelegate {
     func didUpdateWeather(_ weatherManager: NetworkManager, weather: WeatherModel)
-    func didUpdateGeocode(_ weatherManager: NetworkManager, geocode: GeocodeModel)
+    func didUpdateGeocode(_ weatherManager: NetworkManager, geocode: GeocodeData)
 
     func didFailWithError(error: String)
 }

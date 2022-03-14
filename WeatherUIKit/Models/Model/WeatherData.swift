@@ -23,7 +23,3 @@ struct Weather: Codable {
     let id: Int
 }
 
-struct Temp: Codable {
-    let day: Double
-    let night: Double
-}

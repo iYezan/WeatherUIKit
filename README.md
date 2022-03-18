@@ -8,6 +8,6 @@ The project utilizes an MVC design pattern to separate the business logic from t
 
 * Swift 5
 * MVC architectural pattern
-* Auto layout
+* Programmatic views
 * Openweathermap API
 * Dark mode support
